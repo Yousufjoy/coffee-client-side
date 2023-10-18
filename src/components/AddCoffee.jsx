@@ -29,8 +29,8 @@ const AddCoffee = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
+          // insertedId eta pacchi amra dat k console log korle
           Swal.fire({
-            position: "top-end",
             icon: "success",
             title: "Coffee Added Successfully!!!",
             showConfirmButton: false,
