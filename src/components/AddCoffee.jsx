@@ -51,7 +51,7 @@ const AddCoffee = () => {
               type="text"
               name="name"
               className="input input-bordered join-item w-full"
-              placeholder="Name"
+              defaultValue="Name"
             />
           </div>
           <div className="join md:w-1/2 ml-4">
@@ -59,7 +59,7 @@ const AddCoffee = () => {
               type="text"
               name="quantity"
               className="input input-bordered join-item w-full"
-              placeholder="Quantity"
+              defaultValue="Quantity"
             />
           </div>
         </div>
@@ -70,7 +70,7 @@ const AddCoffee = () => {
               type="text"
               name="supplier"
               className="input input-bordered join-item w-full"
-              placeholder="Supplier Name"
+              defaultValue="Supplier Name"
             />
           </div>
           <div className="join md:w-1/2 ml-4">
@@ -78,7 +78,7 @@ const AddCoffee = () => {
               type="text"
               name="taste"
               className="input input-bordered join-item w-full"
-              placeholder="Taste"
+              defaultValue="Taste"
             />
           </div>
         </div>
@@ -89,7 +89,7 @@ const AddCoffee = () => {
               type="text"
               name="category"
               className="input input-bordered join-item w-full"
-              placeholder="Category"
+              defaultValue="Category"
             />
           </div>
           <div className="join md:w-1/2 ml-4">
@@ -97,7 +97,7 @@ const AddCoffee = () => {
               type="text"
               name="details"
               className="input input-bordered join-item w-full"
-              placeholder="Details"
+              defaultValue="Details"
             />
           </div>
         </div>
@@ -108,7 +108,7 @@ const AddCoffee = () => {
               type="text"
               name="photo"
               className="input input-bordered join-item w-full"
-              placeholder="Photo URL"
+              defaultValue="Photo URL"
             />
           </div>
         </div>
