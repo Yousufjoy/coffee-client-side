@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
-const CoffeeCard = ({ coffee }) => {
+const CoffeeCard = ({ coffee, setCoffees, coffees }) => {
   const { _id, name, quantity, supplier, taste, category, photo } = coffee;
 
   const handleDelete = (_id) => {
@@ -24,6 +24,9 @@ const CoffeeCard = ({ coffee }) => {
             console.log(data);
             if (data.deletedCount > 0) {
               Swal.fire("Deleted!", "Your Coffee has been deleted.", "success");
+
+              const remaining = coffees.filter((cof) => cof._id !== _id);
+              setCoffees(remaining);
             }
           });
       }
@@ -32,7 +35,7 @@ const CoffeeCard = ({ coffee }) => {
   return (
     <div className="card card-side bg-base-100 shadow-xl">
       <figure>
-        <img src={photo} alt="Movie" />
+        <img src={photo} alt="Coffee" />
       </figure>
       <div className="flex justify-between w-full pr-4">
         <div>
