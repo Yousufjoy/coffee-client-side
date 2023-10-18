@@ -1,3 +1,5 @@
+import Swal from "sweetalert2";
+
 const AddCoffee = () => {
   const handleAddCoffee = (e) => {
     e.preventDefault();
@@ -13,6 +15,29 @@ const AddCoffee = () => {
     const newCoffee = { name, quantity, supplier, taste, category, photo };
 
     console.log(newCoffee);
+
+    //send data to the server
+
+    fetch("http://localhost:5000/coffee", {
+      // eta korar jonno just google e Uploading JSON data likhe search dile pawa jabe doc
+      method: "POST",
+      headers: {
+        "content-type": "application/json", // Ki dhoroner data pathabo jehetu json type
+      },
+      body: JSON.stringify(newCoffee),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId) {
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Coffee Added Successfully!!!",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        }
+      });
   };
 
   return (
